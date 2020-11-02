@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/assert.js"],"names":["expectation","msg","Error"],"mappings":";;;;;;;AAAe,kBAASA,WAAT,EAAsBC,GAAtB,EAA2B;AACzC,MAAI,CAACD,WAAL,EAAkB;AACjB,UAAM,IAAIE,KAAJ,CAAUD,GAAV,CAAN;AACA;AACD","sourcesContent":["export default function(expectation, msg) {\n\tif (!expectation) {\n\t\tthrow new Error(msg);\n\t}\n}\n"],"file":"assert.js"}
