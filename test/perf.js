@@ -1,15 +1,15 @@
 import {use} from 'chai';
 import sinonChai from 'sinon-chai';
-import Entity from "../src";
+import Entity from '../src';
 
 use(sinonChai);
 
-describe.only('Performance', function() {
+describe.skip('Performance', function() {
 	const rawEntity = {
 		links: [
 			{
 				rel: ['self'],
-				href: 'http://example.com/api/1'
+				href: 'http://example.com/api/1',
 			}
 		],
 		entities: [{
@@ -55,15 +55,15 @@ describe.only('Performance', function() {
 						name: 'field1',
 						type: 'text',
 						required: true,
-					},{
+					}, {
 						name: 'field2',
 						type: 'text',
 						required: true,
-					},{
+					}, {
 						name: 'field3',
 						type: 'number',
 						required: true,
-					},{
+					}, {
 						name: 'field4',
 						type: 'text',
 						required: true,
@@ -75,13 +75,16 @@ describe.only('Performance', function() {
 	};
 
 	describe('parse performance test', function() {
-		this.timeout(100_000);
+		// eslint-disable-next-line no-invalid-this
+		this.timeout(100000);
 		const iterations = 1000000;
 		it('should parse in a reasonable amount of time', () => {
+			// eslint-disable-next-line no-console
 			console.time('test');
 			for (let i = 0; i < iterations; i++) {
 				Entity(rawEntity);
 			}
+			// eslint-disable-next-line no-console
 			console.timeEnd('test');
 		});
 	});
