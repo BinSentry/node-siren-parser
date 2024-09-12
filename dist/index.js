@@ -34,14 +34,30 @@ function Entity(entity) {
     entity = JSON.parse(entity);
   }
 
-  (0, _assert["default"])('undefined' === typeof entity.rel || Array.isArray(entity.rel), 'entity.rel must be an array or undefined, got ' + JSON.stringify(entity.rel));
-  (0, _assert["default"])('undefined' === typeof entity.title || 'string' === typeof entity.title, 'entity.title must be a string or undefined, got ' + JSON.stringify(entity.title));
-  (0, _assert["default"])('undefined' === typeof entity.type || 'string' === typeof entity.type, 'entity.type must be a string or undefined, got ' + JSON.stringify(entity.type));
-  (0, _assert["default"])('undefined' === typeof entity.properties || 'object' === _typeof(entity.properties), 'entity.properties must be an object or undefined, got ' + JSON.stringify(entity.properties));
-  (0, _assert["default"])('undefined' === typeof entity["class"] || Array.isArray(entity["class"]), 'entity.class must be an array or undefined, got ' + JSON.stringify(entity["class"]));
-  (0, _assert["default"])('undefined' === typeof entity.actions || Array.isArray(entity.actions), 'entity.actions must be an array or undefined, got ' + JSON.stringify(entity.actions));
-  (0, _assert["default"])('undefined' === typeof entity.links || Array.isArray(entity.links), 'entity.links must be an array or undefined, got ' + JSON.stringify(entity.links));
-  (0, _assert["default"])('undefined' === typeof entity.entities || Array.isArray(entity.entities), 'entity.entities must be an array or undefined, got ' + JSON.stringify(entity.entities));
+  (0, _assert["default"])('undefined' === typeof entity.rel || Array.isArray(entity.rel), function () {
+    return 'entity.rel must be an array or undefined, got ' + JSON.stringify(entity.rel);
+  });
+  (0, _assert["default"])('undefined' === typeof entity.title || 'string' === typeof entity.title, function () {
+    return 'entity.title must be a string or undefined, got ' + JSON.stringify(entity.title);
+  });
+  (0, _assert["default"])('undefined' === typeof entity.type || 'string' === typeof entity.type, function () {
+    return 'entity.type must be a string or undefined, got ' + JSON.stringify(entity.type);
+  });
+  (0, _assert["default"])('undefined' === typeof entity.properties || 'object' === _typeof(entity.properties), function () {
+    return 'entity.properties must be an object or undefined, got ' + JSON.stringify(entity.properties);
+  });
+  (0, _assert["default"])('undefined' === typeof entity["class"] || Array.isArray(entity["class"]), function () {
+    return 'entity.class must be an array or undefined, got ' + JSON.stringify(entity["class"]);
+  });
+  (0, _assert["default"])('undefined' === typeof entity.actions || Array.isArray(entity.actions), function () {
+    return 'entity.actions must be an array or undefined, got ' + JSON.stringify(entity.actions);
+  });
+  (0, _assert["default"])('undefined' === typeof entity.links || Array.isArray(entity.links), function () {
+    return 'entity.links must be an array or undefined, got ' + JSON.stringify(entity.links);
+  });
+  (0, _assert["default"])('undefined' === typeof entity.entities || Array.isArray(entity.entities), function () {
+    return 'entity.entities must be an array or undefined, got ' + JSON.stringify(entity.entities);
+  });
 
   if (entity.rel) {
     // Only applies to sub-entities (required for them)
