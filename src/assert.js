@@ -1,5 +1,5 @@
 export default function(expectation, msg) {
 	if (!expectation) {
-		throw new Error(msg);
+		throw new Error(typeof msg === 'function' ? msg() : msg);
 	}
 }

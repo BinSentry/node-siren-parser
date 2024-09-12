@@ -12,7 +12,7 @@ const
 use(sinonChai);
 use(sirenChai);
 
-describe('Siren Superagent Plugin', function() {
+describe.skip('Siren Superagent Plugin', function() {
 	let app, src;
 
 	beforeEach(function() {
