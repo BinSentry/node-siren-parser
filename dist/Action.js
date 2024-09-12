@@ -26,14 +26,30 @@ function Action(action) {
     return new Action(action);
   }
 
-  (0, _assert["default"])('object' === _typeof(action), 'action must be an object, got ' + JSON.stringify(action));
-  (0, _assert["default"])('string' === typeof action.name, 'action.name must be a string, got ' + JSON.stringify(action.name));
-  (0, _assert["default"])('string' === typeof action.href, 'action.href must be a string, got ' + JSON.stringify(action.href));
-  (0, _assert["default"])('undefined' === typeof action["class"] || Array.isArray(action["class"]), 'action.class must be an array or undefined, got ' + JSON.stringify(action["class"]));
-  (0, _assert["default"])('undefined' === typeof action.method || 'string' === typeof action.method, 'action.method must be a string or undefined, got ' + JSON.stringify(action.method));
-  (0, _assert["default"])('undefined' === typeof action.title || 'string' === typeof action.title, 'action.title must be a string or undefined, got ' + JSON.stringify(action.title));
-  (0, _assert["default"])('undefined' === typeof action.type || 'string' === typeof action.type, 'action.type must be a string or undefined, got ' + JSON.stringify(action.type));
-  (0, _assert["default"])('undefined' === typeof action.fields || Array.isArray(action.fields), 'action.fields must be an array or undefined, got ' + JSON.stringify(action.fields));
+  (0, _assert["default"])('object' === _typeof(action), function () {
+    return 'action must be an object, got ' + JSON.stringify(action);
+  });
+  (0, _assert["default"])('string' === typeof action.name, function () {
+    return 'action.name must be a string, got ' + JSON.stringify(action.name);
+  });
+  (0, _assert["default"])('string' === typeof action.href, function () {
+    return 'action.href must be a string, got ' + JSON.stringify(action.href);
+  });
+  (0, _assert["default"])('undefined' === typeof action["class"] || Array.isArray(action["class"]), function () {
+    return 'action.class must be an array or undefined, got ' + JSON.stringify(action["class"]);
+  });
+  (0, _assert["default"])('undefined' === typeof action.method || 'string' === typeof action.method, function () {
+    return 'action.method must be a string or undefined, got ' + JSON.stringify(action.method);
+  });
+  (0, _assert["default"])('undefined' === typeof action.title || 'string' === typeof action.title, function () {
+    return 'action.title must be a string or undefined, got ' + JSON.stringify(action.title);
+  });
+  (0, _assert["default"])('undefined' === typeof action.type || 'string' === typeof action.type, function () {
+    return 'action.type must be a string or undefined, got ' + JSON.stringify(action.type);
+  });
+  (0, _assert["default"])('undefined' === typeof action.fields || Array.isArray(action.fields), function () {
+    return 'action.fields must be an array or undefined, got ' + JSON.stringify(action.fields);
+  });
   this.name = action.name;
   this.href = action.href;
 

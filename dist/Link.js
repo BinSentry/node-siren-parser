@@ -22,12 +22,24 @@ function Link(link) {
     return new Link(link);
   }
 
-  (0, _assert["default"])('object' === _typeof(link), 'link must be an object, got ' + JSON.stringify(link));
-  (0, _assert["default"])(Array.isArray(link.rel), 'link.rel must be an array, got ' + JSON.stringify(link.rel));
-  (0, _assert["default"])('string' === typeof link.href, 'link.href must be a string, got ' + JSON.stringify(link.href));
-  (0, _assert["default"])('undefined' === typeof link["class"] || Array.isArray(link["class"]), 'link.class must be an array or undefined, got ' + JSON.stringify(link["class"]));
-  (0, _assert["default"])('undefined' === typeof link.title || 'string' === typeof link.title, 'link.title must be a string or undefined, got ' + JSON.stringify(link.title));
-  (0, _assert["default"])('undefined' === typeof link.type || 'string' === typeof link.type, 'link.type must be a string or undefined, got ' + JSON.stringify(link.type));
+  (0, _assert["default"])('object' === _typeof(link), function () {
+    return 'link must be an object, got ' + JSON.stringify(link);
+  });
+  (0, _assert["default"])(Array.isArray(link.rel), function () {
+    return 'link.rel must be an array, got ' + JSON.stringify(link.rel);
+  });
+  (0, _assert["default"])('string' === typeof link.href, function () {
+    return 'link.href must be a string, got ' + JSON.stringify(link.href);
+  });
+  (0, _assert["default"])('undefined' === typeof link["class"] || Array.isArray(link["class"]), function () {
+    return 'link.class must be an array or undefined, got ' + JSON.stringify(link["class"]);
+  });
+  (0, _assert["default"])('undefined' === typeof link.title || 'string' === typeof link.title, function () {
+    return 'link.title must be a string or undefined, got ' + JSON.stringify(link.title);
+  });
+  (0, _assert["default"])('undefined' === typeof link.type || 'string' === typeof link.type, function () {
+    return 'link.type must be a string or undefined, got ' + JSON.stringify(link.type);
+  });
   this.rel = link.rel;
   this.href = link.href;
 
