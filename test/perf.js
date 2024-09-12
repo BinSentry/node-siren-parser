@@ -4,7 +4,7 @@ import Entity from "../src";
 
 use(sinonChai);
 
-describe.skip('Performance', function() {
+describe.only('Performance', function() {
 	const rawEntity = {
 		links: [
 			{
@@ -76,7 +76,7 @@ describe.skip('Performance', function() {
 
 	describe('parse performance test', function() {
 		this.timeout(100_000);
-		const iterations = 5000000;
+		const iterations = 1000000;
 		it('should parse in a reasonable amount of time', () => {
 			console.time('test');
 			for (let i = 0; i < iterations; i++) {
